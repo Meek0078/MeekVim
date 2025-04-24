@@ -11,4 +11,9 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("meek.plugins")
+require("lazy").setup({ { import = "meek.plugins" }, { import = "meek.plugins.lsp" } } , {
+    change_detection = {
+        notify = false,
+    },
+})
+

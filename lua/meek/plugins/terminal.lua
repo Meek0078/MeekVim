@@ -19,6 +19,6 @@ return {
 
         local keymap = vim.keymap
 
-        keymap.set({"t", "n"}, "<C-7>", "<cmd>ToggleTerm<CR>", { desc = "Toggle Terminal" })
+            keymap.set({"t", "n"}, "<leader>tm", "<cmd>ToggleTerm<CR>", { desc = "Toggle Terminal" })
     end,
 }
