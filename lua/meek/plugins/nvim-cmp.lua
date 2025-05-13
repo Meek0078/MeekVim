@@ -54,6 +54,15 @@ return {
 				{ name = "path" }, -- file system paths
 			}),
 
+			filetypes = cmp.setup.filetype('twig', {
+				sources = cmp.config.sources({
+					{ name = "nvim_lsp" },
+					{ name = "buffer" },
+					{ name = "emmet" },
+					{ name = "path" },
+				}),
+			}),
+
 			-- configure lspkind for vs-code like pictograms in completion menu
 			formatting = {
 				format = lspkind.cmp_format({

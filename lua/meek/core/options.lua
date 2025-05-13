@@ -34,3 +34,5 @@ opt.clipboard:append("unnamedplus") -- uses system clipboard as default register
 opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
 
+-- display filepath at the top right
+vim.o.winbar = "%=%m %f"
