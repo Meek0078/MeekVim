@@ -17,5 +17,7 @@ return {
         keymap.set("n", "<M-2>", function() ui.nav_file(2) end, { desc = "Switch to 2nd Harpoon File" })
         keymap.set("n", "<M-3>", function() ui.nav_file(3) end, { desc = "Switch to 3rd Harpoon File" })
         keymap.set("n", "<M-4>", function() ui.nav_file(4) end, { desc = "Switch to 4th Harpoon File" })
+        keymap.set("n", "<M-5>", function() ui.nav_file(5) end, { desc = "Switch to 5th Harpoon File" })
+        keymap.set("n", "<M-6>", function() ui.nav_file(6) end, { desc = "Switch to 6th Harpoon File" })
     end,
 }

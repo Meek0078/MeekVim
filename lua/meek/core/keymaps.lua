@@ -23,3 +23,6 @@ keymap.set("n", "[t", function()
   require("todo-comments").jump_prev()
 end, { desc = "Previous Todo Comment" })
 
+keymap.set("i", "<C-k>", function()
+  vim.lsp.buf.signature_help()
+end, { noremap = true, silent = true, desc = "Signature Help" })

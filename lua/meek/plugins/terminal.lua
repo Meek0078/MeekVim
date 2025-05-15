@@ -1,6 +1,6 @@
 return {
-    'akinsho/toggleterm.nvim', 
-    version = "*", 
+    'akinsho/toggleterm.nvim',
+    version = "*",
 
     config = function()
         require("toggleterm").setup({
@@ -9,7 +9,7 @@ return {
             direction = "float", -- "vertical" | "float" | "tab"
             float_opts = {
                 border = "curved",
-            }, 
+            },
             shade_terminals = true,
             start_in_insert = true,
             insert_mappings = true,
@@ -19,6 +19,6 @@ return {
 
         local keymap = vim.keymap
 
-            keymap.set({"t", "n"}, "<M-t>", "<cmd>ToggleTerm<CR>", { desc = "Toggle Terminal" })
+            keymap.set({"t", "n", "i"}, "<M-t>", "<cmd>ToggleTerm<CR>i", { desc = "Toggle Terminal" })
     end,
 }
