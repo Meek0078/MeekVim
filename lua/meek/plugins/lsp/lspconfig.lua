@@ -55,6 +55,10 @@ return {
             filetypes = { "css", "eruby", "html", "twig" }
         })
 
+        lspconfig.html.setup({
+            filetypes = { "html", "twig" },
+        })
+
         vim.api.nvim_create_autocmd("LspAttach", {
             group = vim.api.nvim_create_augroup("UserLspConfig", {}),
             callback = function(ev)

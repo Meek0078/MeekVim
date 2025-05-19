@@ -3,7 +3,7 @@ vim.g.mapleader = " "
 local keymap = vim.keymap
 
 -- Disable the Search Highlighting with ESC
-keymap.set("n", "<ESC>", "<cmd>nohlsearch<CR>") 
+keymap.set("n", "<ESC>", "<cmd>nohlsearch<CR>")
 
 -- TODO Plugin:
 
@@ -26,3 +26,12 @@ end, { desc = "Previous Todo Comment" })
 keymap.set("i", "<C-k>", function()
   vim.lsp.buf.signature_help()
 end, { noremap = true, silent = true, desc = "Signature Help" })
+
+-- Dismiss copilot suggestion when pressing Ctrl+C
+vim.keymap.set("i", "<C-c>", function()
+  local ok, suggestion = pcall(require, "copilot.suggestion")
+  if ok and suggestion.is_visible() then
+    suggestion.dismiss()
+  end
+  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<C-c>", true, false, true), "n", true)
+end, { desc = "Dismiss Copilot on Ctrl+C", noremap = true, silent = true })
